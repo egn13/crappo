@@ -1,0 +1,849 @@
+:root {
+    --primary-color: #0D0D2B;
+    --color-accent: #3671E9;
+    --neutral-grey: #828282;
+}
+
+body {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    background: var(--primary-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 40px;
+    line-height: 72px;
+    font-weight: 700;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin-right: 0;
+    width: 164px;
+    height: 55px;
+    text-align: center;
+    border-radius: 32px;
+    background-color: var(--color-accent);
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: var(--color-accent);
+}
+
+.button_header {
+    margin-left: 24px;
+}
+
+.button_trade:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.button_header::before {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 32px;
+    width: 1px;
+    background-color: #aaa9a9;
+    top: calc(50% - 12px);
+    left: -24px
+}
+
+.button_promo {
+    margin-top: 32px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 24px;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Header */
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 52px;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__list-link {
+    position: relative;
+    line-height: 28px;
+    margin-right: 32px;
+    transition: color .2s ease;
+}
+
+.header__list-link:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    bottom: -4px;
+    transition: width .2s ease;
+}
+
+.header__list-link:hover {
+    color: var(--color-accent);
+}
+
+.header__list-link:hover:before {
+    width: 100%;
+}
+
+/* Promo */
+.promo__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo__inner-subtitle {
+    display: inline-block;
+    margin-top: 131px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 32px;
+    padding: 4px 11px 4px 4px;
+    margin-bottom: 24px;
+}
+
+.promo__inner-subtitle span{
+    color: #0D0D2B;
+    background-color: #fff;
+    border-radius: 32px;
+    padding: 4px 16px;
+    margin-right: 16px;
+}
+
+.promo_inner-title {
+    font-size: 64px;
+    margin: 0 0 28px 0;
+}
+
+.promo__inner-description {
+    color: #E0E0E0;
+    letter-spacing: 0.16px;
+}
+
+/* About */
+.about__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 100px 0 148px 0;
+}
+
+.about__block-item {
+    display: flex;
+    align-items: center;
+}
+
+.about__item-icon-block {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+}
+
+.about__item-description-block {
+    margin-left: 24px;
+}
+
+.about__item-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.about__item-description {   
+    letter-spacing: 0.16px;
+}
+
+/* Trade */
+.trade {
+    position: relative;
+    margin: 100px 0 219px 0;
+}
+
+.trade_title {
+    text-align: center;
+}
+
+.trade__header-description {
+    text-align: center;
+    font-size: 18px;
+    line-height: 27px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.trade__calc, .trade__calc-info {
+    display: flex;
+    position: absolute;
+    width: 942px;
+    left: calc(50% - 471px);
+    padding: 62px 48px 48px 48px;
+}
+
+.trade__calc {
+    top: 180px;
+    background: #FBFCFE;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+.trade__calc-input, .trade__calc-select {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.trade__calc-input {
+    flex-grow: 1;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.trade__calc-select {
+    border: none;
+    flex: 0 0 200px;
+    margin: 0px 48px;
+    background-color: #FBFCFE;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.trade__light {
+    position: relative;
+    background: linear-gradient(180deg, #F8F9FB 0%, #FAFBFF 100%);
+    min-height: 500px;
+    padding-top: 316px;
+}
+
+.trade__calc-info {
+    top: 0;
+    background-color: #fff;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    flex-direction: column;
+}
+
+.trade__calc-info-hour {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.64px;
+    line-height: 24px;
+}
+
+.trade__calc-info-total {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.28px;
+    line-height: 48px;
+    color: #000;
+    margin: 16px 0 4px 0;
+}
+
+.trade__calc-info-total span {
+    color: var(--color-accent);
+}
+
+.trade__calc-info-description {
+    color: var(--neutral-grey);
+    letter-spacing: 0.16px;
+}
+
+.trade__light-title {
+    color: var(--primary-color);
+    line-height: 60px;
+    text-align: center;
+}
+
+.trade__crypto {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 64px;
+}
+
+.trade__crypto-item {
+    padding: 48px 24px;
+    color: var(--primary-color);
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 310px;
+    min-height: 433px;
+    transition: all .4s ease;
+}
+
+.trade__crypto-item:hover {
+    background-color: #2B076E;
+    color: #fff;
+}
+
+.trade__crypto-item:hover .crypto__btn-text {
+    width: 133px;
+}
+
+.trade__crypto-item:hover .crypto__btn-text {
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.trade__crypto-item:hover .crypto__btn-icon {
+    border: 2px solid #fff;
+    transform: scale(.5);
+}
+
+.trade__crypto-item-images {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.trade__crypto-item-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trade__crypto-item-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 48px 0 16px 0;
+}
+
+.trade__crypto-item-title sup {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--neutral-grey);
+    line-height: 27px;
+}
+
+.trade__crypto-item-description {
+    line-height: 28px;
+    letter-spacing: 0.16px;
+    text-align: center;
+}
+
+.trade__crypto-item-btn {
+    margin: 25px 0;
+}
+
+.crypto__btn {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-accent);
+    border-radius: 50px;
+    transition: background-color .2s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.crypto__btn-text {
+    width: 0;
+    transition: all .2s ease;
+}
+
+.crypto__btn-icon {
+    display: block;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(43, 7, 110, 0.20);
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #fff;
+    transform: scale(1);
+    transition: all .2s ease;
+}
+
+/* Star mining */
+.start-mining {
+    padding: 80px 0 40px 0;
+    background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
+}
+
+.start-mining__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px;
+    background-color: var(--color-accent);
+    border-radius: 15px;
+}
+
+.start-mining__info-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.start-mining__info-description {
+    width: 70%;
+    letter-spacing: 0.16px;
+}
+
+.letter-form {
+    display: flex;
+    flex-grow: 1;
+    padding-left: 190px;
+    align-items: center;
+}
+
+.letter-form-input {
+    flex-grow: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+}
+
+.letter-form-input::placeholder {
+    letter-spacing: 0.16px;
+}
+
+.letter-form_button {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    background-color: #fff;
+    color: #2B076E;
+    margin-left: 40px;
+    transition: all .2s ease;
+}
+
+.letter-form_button:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+/* Footer */
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+.footer__social-item {
+    display: flex;
+}
+
+.footer__social-link img {
+    margin-left: 32px;
+}
+
+.footer__social-link img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1199.98px) {
+    .container {
+        width: 1000px;
+    }
+
+    .about__block {
+        margin-bottom: 100px;
+    }
+
+    .promo_inner-title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .container {
+        width: 700px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .button {
+        height: 40px;
+    }
+
+    .button_header {
+        margin: 40px 0 0 0;
+    }
+
+    .button_header::before {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .header__wrapper {
+        height: 22px;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 0;
+        left: -200%;
+        width: 40%;
+        background: #161640;
+        height: 100vh;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: left .4s linear;
+    }
+
+    .header__nav.active {
+        opacity: .95;
+        left: 0;
+    }
+
+    .header__nav, .header__list {
+        flex-direction: column;
+     }
+
+     .header__list-item {
+        padding: 20px 0;
+     }
+
+     .header__list {
+        width: 100%;
+        text-align: center;
+     }
+
+     .header__list-link {
+        margin-right: 0;
+        font-size: 20px;
+     }
+
+    .promo_inner-title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .promo__inner-description {
+        font-size: 14px;
+    }
+
+    .promo__inner-background {
+        overflow: hidden;
+    }
+
+    .about__block {
+        margin-bottom: 50px;
+    }
+
+    .about__item-icon-block {
+        width: 60px;
+        height: 60px;
+    }
+
+    .about__item-title {
+        font-size: 26px;
+        line-height: 22px;
+    }
+
+    .about__item-description {
+        font-size: 10px;
+    }
+
+    .trade {
+        margin: 0 0 148px 0;
+    }
+
+    .trade__header-description {
+        font-size: 16px;
+    }
+
+    .trade__calc, .trade__calc-info {
+        width: 560px;
+        left: calc(50% - 280px);
+        padding: 30px 24px 24px 24px;
+     }
+
+     .trade__calc-input, .trade__calc-select {
+        font-size: 14px;
+     }
+
+     .trade__calc-select {
+        flex: 0 0 100px
+     }
+
+     .trade__calc-info-total {
+        font-size: 24px;
+        margin-top: 8px;
+     }
+
+     .trade__calc-info-hour {
+        font-size: 14px;
+     }
+     
+     .trade__calc-info-description {
+        font-size: 14px;
+     }
+
+     .trade__light {
+        padding-top: 200px;
+     }
+
+     .trade__light-title {
+        line-height: 30px;
+     }
+
+     .trade__crypto-item {
+        padding: 24px 12px;
+        min-height: 300px;
+        margin-bottom: 20px;
+     }
+
+     .trade__crypto-item-images {
+        width: 60px;
+        height: 60px;
+     }
+
+     .trade__crypto-item-title {
+        font-size: 26px;
+        margin: 42px 0 8px 0;
+     }
+
+     .crypto__btn-icon {
+        width: 48px;
+        height: 48px;
+     }
+
+     .crypto__btn-text {
+        line-height: 24px;
+     }
+
+     .start-mining {
+        padding-top: 40px;
+     }
+
+     .start-mining__wrapper {
+        padding: 24px;
+        flex-direction: column;
+     }
+
+     .start-mining__info-title {
+        font-size: 26px;
+     }
+
+     .start-mining__info-description {
+        margin: 12px 0;
+     }
+
+     .letter-form {
+        padding-left: 0;
+     }
+
+     @media (max-width: 767.98px) {
+        .container {
+            width: 95%;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+
+        .header__nav {
+            width: 80%;
+        }
+
+        .promo__inner-background {
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+        }
+
+        .promo_inner-title {
+            margin-bottom: 0;
+        }
+
+        .promo__inner-subtitle {
+            margin-top: 70px;
+        }
+
+        .button_header:hover {
+            background-color: var(--color-accent);
+            color: #fff;
+        }
+
+        .header__list-link:hover {
+            color: #fff;
+         }
+    
+         .header__list-link:hover.header__list-link::before {
+            width: 0;
+         }
+
+         .about__block {
+            flex-direction: column;
+            margin: 80px 0 0 0;
+         }
+
+         .about__block-item {
+            margin-bottom: 30px;
+         }
+
+         .promo__container {
+            object-fit: cover;
+         }
+
+         .trade {
+            margin: 0;
+         }
+
+         .trade__light {
+            padding-top: 0;
+         }
+
+         .trade__calc, .trade__calc-info {
+            width: 90%;
+            left: calc(50% - 45%);
+            position: relative;
+         }
+
+         .trade__calc {
+            flex-direction: column;
+            top: 0;
+            margin-top: 40px;
+         }
+
+         .trade__calc-input {
+            flex: 0;
+         }
+
+         .trade__calc-info {
+            align-items: center;
+         }
+
+         .trade__crypto-item-title {
+            margin-top: 20px;
+         }
+
+         .trade__calc-select {
+            flex: 0;
+            margin: 24px 0;
+         }
+
+         .trade_title {
+            line-height: 28px;
+         }
+
+         .trade__header-description {
+            width: 100%;
+         }
+
+         .button_trade {
+            margin: 0 auto;
+         }
+
+         .trade__calc-info-total {
+            margin-top: 0;
+            font-size: 18px;
+         }
+
+         .trade__calc-info-description {
+            text-align: center;
+         }
+
+         .trade__light-title {
+            font-size: 20px;
+            margin-top: 20px;
+         }
+
+         .trade__crypto {
+            margin-top: 32px;
+            justify-content: center;
+         }
+
+         .start-mining__info-description {
+            width: 100%;
+         }
+
+         .footer__wrapper {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+         }
+
+         .footer__social {
+            margin-top: 20px;
+         }
+         
+         .footer__social-link img {
+            margin-left: 0px;
+            margin-right: 32px;
+        }
+     }
+
+     @media (max-width: 424.98px) {
+        .promo__inner-subtitle {
+            margin-top: 30px;
+        }
+
+        .promo__inner-description {
+            font-size: 11px;
+        }
+
+        .about__block {
+            margin-top: 40px;
+        }
+
+        .letter-form {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .trade__light-title {
+            font-size: 18px;
+        }
+
+        .trade__calc-info-total {
+            font-size: 16px;
+        }
+
+        .letter-form_button {
+            margin-top: 20px;
+            margin-left: 0;
+        }
+     }
+}
